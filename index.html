@@ -1,103 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
-  <title>Frank McKee Brown</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <title>Frank McKee Brown</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="javascript/index.js"></script>
 
-  <style>
-    * {
-        --main-color:  #007acc;
-    }
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background-color: var(--main-color);
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 15px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    main {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    section {
-      margin-bottom: 3rem;
-    }
-    h2 {
-      border-bottom: 2px solid var(--main-color);
-      padding-bottom: 0.3rem;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #f0f0f0;
-      font-size: 0.9rem;
-    }
-    .project {
-      margin-bottom: 1rem;
-    }
-    details {
-      background: white;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-      padding: 0.5rem 1rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-      transition: all 0.3s ease;
-    }
-
-    summary {
-      font-weight: bold;
-      cursor: pointer;
-      outline: none;
-      position: relative;
-      padding: 0.5rem 0;
-      list-style: none;
-    }
-
-    summary::-webkit-details-marker {
-      display: none;
-    }
-
-    summary::after {
-      content: "➕";
-      position: absolute;
-      right: 0;
-      transition: transform 0.3s;
-    }
-
-    details[open] summary::after {
-      content: "➖";
-    }
-
-    details > div {
-      padding: 0.5rem 0 1rem 0;
-      border-top: 1px solid #ddd;
-    }
-  </style>
+    <style id="customize-styles">
+        * {
+            --main-color:  #007acc;
+            --bg: #f9f9f9;
+            --color: #222;
+        }
+    </style>
 </head>
 <body>
   <header>
     <h1>Frank McKee Brown</h1>
-    <p>Short tagline or description about yourself</p>
+    <p>This website is being used to house my notes and maybe some software projects in the future. </p>
     <nav>
       <a href="#about">About</a>
+      <a href="/goodreads">Goodreads</a>
+      <a href="/goodreads">Notes</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -109,15 +35,19 @@
         For those of you who visited my previous website, I decided to quit using AWS because I decided to stop pursing software projects that involved the need for cloud services for a while. I was getting tired of managing everything like RDS, S3, CloudFront, AWS Load Balancer, Lambda Functions, and EC2, so I am just going to have this site for a while and write about what I am reading and maybe do some software projects if I want to.  
       </p>
       <p>
-        You can use for 
+        You can use the links at the top of the page to navigate the website.
       </p>
      <details>
     <summary>Website Style Customization</summary>
     <div>
         <form action="none">
-            <input type="color" id="background-color">
-            <input type="color" id="text-color">
-            <input type="color" id="">
+            <div class="color-wrapper">
+                <label for="background-color">Background Color:</label><input type="color" name="background-color" id="background-color" value="#007acc">
+            </div>
+            <div class="color-wrapper new-p"><label for="text-color">Text Color:</label><input type="color" id="text-color" value="#f9f9f9"></div>
+            <div class="color-wrapper new-p"><label for="main-theme-color">Main Theme Color:</label><input type="color" id="main-theme-color" value="#222222"></div>
+            
+            
 
         </form>
     </div>
@@ -136,5 +66,6 @@
   <footer>
     &copy; 2025 Frank McKee Brown. All rights reserved.
   </footer>
+
 </body>
 </html>
